@@ -1,6 +1,6 @@
 import { useId } from "react"
 import styles from "./ThemeToggle.module.css"
-import { useAppContext } from "@/src/hooks/useAppContext"
+import { useAppContext } from "@/hooks/useAppContext"
 
 export const ThemeToggle = ({ isMobile, ...rest }) => {
   const { dispatch } = useAppContext()

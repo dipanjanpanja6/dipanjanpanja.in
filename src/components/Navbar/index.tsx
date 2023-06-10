@@ -1,15 +1,15 @@
 import React, { FC, LegacyRef, MutableRefObject, PropsWithChildren, useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { useWindowSize } from "@/src/hooks/useWindowSize"
-import { cssProps, media, msToNum, numToMs } from "@/src/utils/styles"
-import { useAppContext } from "@/src/hooks/useAppContext"
-import { useScrollToHash } from "@/src/hooks/useScrollToHash"
-import { Transition } from "../Transition"
+import { useWindowSize } from "@/hooks/useWindowSize"
+import { cssProps, media, msToNum, numToMs } from "@/utils/styles"
+import { useAppContext } from "@/hooks/useAppContext"
+ import { Transition } from "../Transition"
 import { ThemeToggle } from "./ThemeToggle"
 import styles from "./index.module.css"
 import Icon from "../Icon"
 import { Syncopate } from "next/font/google"
+import { useScrollToHash } from "@/hooks/useScrollToHash"
 const syncopate = Syncopate({ weight: "700", subsets: ["latin"] })
 
 export default function Navbar() {
