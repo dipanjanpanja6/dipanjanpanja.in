@@ -1,8 +1,8 @@
-import { useId } from "react"
+import { FC, PropsWithChildren, useId } from "react"
 import styles from "./ThemeToggle.module.css"
 import { useAppContext } from "@/hooks/useAppContext"
 
-export const ThemeToggle = ({ isMobile, ...rest }) => {
+export const ThemeToggle: FC<PropsWithChildren<{ isMobile?: boolean }>> = ({ isMobile, ...rest }) => {
   const { dispatch } = useAppContext()
   const id = useId()
   const maskId = `${id}theme-toggle-mask`
@@ -12,7 +12,7 @@ export const ThemeToggle = ({ isMobile, ...rest }) => {
   }
 
   return (
-    <button iconOnly className={styles.toggle} data-mobile={isMobile} aria-label="Toggle theme" onClick={handleClick} {...rest}>
+    <button className={styles.toggle} data-mobile={isMobile} aria-label="Toggle theme" onClick={handleClick} {...rest}>
       <svg aria-hidden className={styles.svg} width="38" height="38" viewBox="0 0 38 38">
         <defs>
           <mask id={maskId}>

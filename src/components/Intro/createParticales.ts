@@ -60,7 +60,9 @@ class CreateParticles {
   }
 
   onMouseDown() {
+    //@ts-ignore
     this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1
+    //@ts-ignore
     this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1
 
     const vector = new THREE.Vector3(this.mouse.x, this.mouse.y, 0.5)
@@ -80,7 +82,9 @@ class CreateParticles {
   }
 
   onMouseMove() {
+    //@ts-ignore
     this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1
+    //@ts-ignore
     this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1
   }
 
@@ -115,6 +119,7 @@ class CreateParticles {
         coulors.setXYZ(i, this.colorChange.r, this.colorChange.g, this.colorChange.b)
         coulors.needsUpdate = true
 
+        //@ts-ignore
         size.array[i] = this.data.particleSize
         size.needsUpdate = true
 
@@ -151,6 +156,7 @@ class CreateParticles {
               coulors.setXYZ(i, this.colorChange.r, this.colorChange.g, this.colorChange.b)
               coulors.needsUpdate = true
 
+              //@ts-ignore
               size.array[i] = this.data.particleSize / 1.2
               size.needsUpdate = true
             } else {
@@ -161,6 +167,7 @@ class CreateParticles {
               pos.setXYZ(i, px, py, pz)
               pos.needsUpdate = true
 
+              //@ts-ignore
               size.array[i] = this.data.particleSize * 1.3
               size.needsUpdate = true
             }
@@ -170,6 +177,7 @@ class CreateParticles {
               coulors.setXYZ(i, this.colorChange.r, this.colorChange.g, this.colorChange.b)
               coulors.needsUpdate = true
 
+              //@ts-ignore
               size.array[i] = this.data.particleSize / 1.8
               size.needsUpdate = true
             }

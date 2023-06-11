@@ -1,6 +1,7 @@
 {
   "hosting": {
-    "source": ".",
+    "public": "out",
+    // "source": ".",
     "site": "next-dipanjan",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "frameworksBackend": {
