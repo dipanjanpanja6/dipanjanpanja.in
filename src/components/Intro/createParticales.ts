@@ -32,11 +32,12 @@ class CreateParticles {
     this.buttom = false
 
     this.data = {
-      text: "WELCOME\n    TO MY\n   WORLD",
+      // text: "WELCOME\n    TO MY\n   WORLD",
+      text: "HEY, I'M DIPANJAN PANJA\nBut you can call me deep",
       amount: 1500,
       particleSize: 1,
       particleColor: 0xffffff,
-      textSize: 16,
+      textSize: 10,
       area: 250,
       ease: 0.05,
     }
